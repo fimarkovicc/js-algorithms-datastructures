@@ -1,0 +1,24 @@
+{
+  "name": "js-algorithms-datastructures",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fimarkovicc/js-algorithms-datastructures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fimarkovicc/js-algorithms-datastructures/issues"
+  },
+  "homepage": "https://github.com/fimarkovicc/js-algorithms-datastructures#readme",
+  "devDependencies": {
+    "eslint": "^8.2.0"
+  }
+}

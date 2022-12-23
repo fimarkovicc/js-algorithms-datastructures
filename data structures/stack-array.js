@@ -5,8 +5,6 @@ class Stack {
 
     push(element) {
         this.items.push(element)
-
-        console.log('sdfdsf')
     }
 
     pop() {
@@ -27,10 +25,6 @@ class Stack {
 
     print() {
         console.log(this.items.toString())
-    }
-
-    dfdsf() {
-        return 0
     }
 }
 

@@ -17,21 +17,17 @@ function calculateFib(numArr, fn) {
     const result = [];
     const start = performance.now();
     numArr.forEach((number) => {
-        // const start = performance.now();
         const fibResult = fn(number);
-        // const end = performance.now();
-        // console.log(
-        //     `Fib${fn === fibMemo ? 'MEMO' : ''} of ${number}: ${fibResult}, ${end - start} ms`,
-        // );
         result.push(fibResult);
     });
-    const end = performance.end();
+    const end = performance.now();
     // console.log(result);
-    return result;
+    // console.log(end - start, 'ms');
+    return { result, performance: end - start };
 }
 
-// const numbersToCalculate = [1, 8, 12, 25, 42];
-// calculateFib(numbersToCalculate, fib);
-// calculateFib(numbersToCalculate, fibMemo);
+const numbersToCalculate = [1, 8, 12, 25, 42];
+calculateFib(numbersToCalculate, fib);
+calculateFib(numbersToCalculate, fibMemo);
 
 module.exports = { calculateFib, fibMemo, fib };

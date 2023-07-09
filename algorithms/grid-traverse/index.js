@@ -18,4 +18,6 @@ function gridTraverseMemo(arr, memo = {}) {
         gridTraverseMemo([arr[0], arr[1] - 1], memo));
 }
 
+// improve gridTraverseMemo where eg. result of [2,1] == [1,2]
+
 module.exports = { gridTraverse, gridTraverseMemo };

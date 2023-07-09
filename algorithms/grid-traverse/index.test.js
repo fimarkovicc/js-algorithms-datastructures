@@ -8,15 +8,17 @@ test('should return the correct value', () => {
 });
 
 test('should return the correct value using memoization', () => {
-    expect(gridTraverse([1, 3])).toBe(1);
+    expect(gridTraverseMemo([1, 3])).toBe(1);
     expect(gridTraverseMemo([3, 0])).toBe(0);
     expect(gridTraverseMemo([3, 3])).toBe(6);
 });
 
 test('performance using memoization should be better', () => {
-    let start = performance.now();
+    let start, end;
+
+    start = performance.now();
     gridTraverse([4, 4]);
-    let end = performance.now();
+    end = performance.now();
     const perfNoMemo = end - start;
 
     start = performance.now();
@@ -24,5 +26,5 @@ test('performance using memoization should be better', () => {
     end = performance.now();
     const perfWithMemo = end - start;
 
-    expect(perfWithMemo < perfNoMemo);
+    expect(perfWithMemo < perfNoMemo).toBe(true);
 });

@@ -13,5 +13,5 @@ test('performance using memoization should be better', () => {
     const perfFn = calculateFib([32], fib).performance;
     const perfFnMemo = calculateFib([32], fibMemo).performance;
 
-    expect(perfFnMemo < perfFn);
+    expect(perfFnMemo < perfFn).toBe(true);
 });
